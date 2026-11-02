@@ -1,0 +1,173 @@
+{% comment %} Moroccan Darija Hub custom homepage. Images are read from Shopify Files by file name. {% endcomment %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Lora:wght@400;600&family=Amiri&display=swap">
+{%- liquid
+  assign s = section.settings
+  assign featured_handle = s.featured_collection | default: 'featured'
+  assign featured = collections[featured_handle]
+-%}
+<div class="mdh">
+  <section class="mdh-hero">
+    <picture>
+      <source media="(max-width: 749px)" srcset="{{ 'hero_mobile.jpg' | file_url }}">
+      <img src="{{ 'hero_desktop.jpg' | file_url }}" alt="Discover Morocco coloring book cover with colored pages of the Hassan II Mosque and a zellige rosette" class="mdh-hero__img" width="2400" height="1100" fetchpriority="high">
+    </picture>
+    <div class="mdh-hero__inner">
+      <p class="mdh-kicker">Moroccan Darija Hub</p>
+      <h1 class="mdh-h1">{{ s.hero_heading }}</h1>
+      <p class="mdh-lead">{{ s.hero_sub }}</p>
+      <div class="mdh-btns">
+        <a class="mdh-btn mdh-btn--primary" href="/collections/coloring-books">Shop coloring books</a>
+        <a class="mdh-btn mdh-btn--ghost" href="/collections/discover-morocco">Explore Morocco</a>
+      </div>
+      <ul class="mdh-ticks"><li>Instant PDF download</li><li>Original illustrations</li><li>Real history on every page</li></ul>
+    </div>
+  </section>
+
+  <section class="mdh-sec">
+    <div class="mdh-head"><p class="mdh-kicker">Collections</p><h2 class="mdh-h2">Choose your journey</h2></div>
+    <div class="mdh-grid3">
+      <a class="mdh-card" href="/collections/discover-morocco">
+        <img src="{{ 'coll_discover.jpg' | file_url }}" alt="Discover Morocco landmark coloring pages" loading="lazy" width="1600" height="1200">
+        <div class="mdh-card__body"><h3>Discover Morocco</h3><p>Famous landmarks to color, with their real stories.</p><span>Shop the collection &rarr;</span></div>
+      </a>
+      <a class="mdh-card" href="/collections/coloring-books-for-kids">
+        <img src="{{ 'coll_kids.jpg' | file_url }}" alt="Moroccan coloring pages for kids: souk, Chefchaouen and Ait Ben Haddou" loading="lazy" width="1600" height="1200">
+        <div class="mdh-card__body"><h3>Little Explorers</h3><p>Bold outlines, simple facts and a Darija word on every page.</p><span>For kids &rarr;</span></div>
+      </a>
+      <a class="mdh-card" href="/collections/moroccan-patterns-zellige">
+        <img src="{{ 'coll_zellige.jpg' | file_url }}" alt="Moroccan zellige pattern coloring pages for adults" loading="lazy" width="1600" height="1200">
+        <div class="mdh-card__body"><h3>Patterns &amp; Zellige</h3><p>Mindful geometric coloring for adults.</p><span>For adults &rarr;</span></div>
+      </a>
+    </div>
+  </section>
+
+  {%- if featured.products.size > 0 -%}
+  <section class="mdh-sec mdh-sec--sand">
+    <div class="mdh-head"><p class="mdh-kicker">Featured</p><h2 class="mdh-h2">Our books</h2></div>
+    <div class="mdh-grid4">
+      {%- for product in featured.products limit: 4 -%}
+        <a class="mdh-prod" href="{{ product.url }}">
+          {%- if product.featured_image -%}{{ product.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', alt: product.title }}{%- endif -%}
+          <h3>{{ product.title }}</h3>
+          <p class="mdh-price">{% if product.compare_at_price > product.price %}<s>{{ product.compare_at_price | money }}</s> {% endif %}{{ product.price | money }}</p>
+        </a>
+      {%- endfor -%}
+    </div>
+    <p class="mdh-center"><a class="mdh-btn mdh-btn--primary" href="/collections/all">Shop all</a></p>
+  </section>
+  {%- endif -%}
+
+  <section class="mdh-sec">
+    <div class="mdh-head"><p class="mdh-kicker">Why Moroccan Darija Hub?</p><h2 class="mdh-h2">Learn Morocco through creativity</h2></div>
+    <div class="mdh-why">
+      {%- assign whys = 'Discover Moroccan culture|Traditions, cities and everyday life, explained simply.;Explore historical landmarks|Twenty famous places, researched from reliable sources.;Learn through creativity|Color, read a story and pick up a Darija word on every page.;Relax and unwind|Detailed zellige patterns for slow, mindful coloring.;Share your heritage|A fun way for families abroad to pass Morocco on to children.' | split: ';' -%}
+      {%- for w in whys -%}{%- assign p = w | split: '|' -%}
+        <div class="mdh-why__item">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="9" y="9" width="22" height="22" fill="#b9472a"/><rect x="9" y="9" width="22" height="22" fill="#b9472a" transform="rotate(45 20 20)"/><circle cx="20" cy="20" r="6" fill="#fbf6ee"/></svg>
+          <h3>{{ p[0] }}</h3><p>{{ p[1] }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <section class="mdh-darija">
+    <div class="mdh-darija__img"><img src="{{ 'darija_1_cover.jpg' | file_url }}" alt="Speak Moroccan Darija ebook cover" loading="lazy" width="2048" height="2048"></div>
+    <div class="mdh-darija__txt">
+      <p class="mdh-kicker mdh-kicker--gold">Learn Moroccan Darija</p>
+      <h2 class="mdh-h2">Want to Speak Like a Moroccan?</h2>
+      <p class="mdh-ar" lang="ar" dir="rtl">تكلم الدارجة المغربية</p>
+      <p>Learn everyday Moroccan Darija with simple explanations, useful expressions, and practical examples designed for beginners.</p>
+      <ul class="mdh-ticks mdh-ticks--light"><li>10 travel units</li><li>400+ words &amp; phrases</li><li>Written by a native speaker</li></ul>
+      <a class="mdh-btn mdh-btn--gold" href="/products/speak-moroccan-darija-ebook">Discover the ebook</a>
+    </div>
+  </section>
+
+  <section class="mdh-sec mdh-news">
+    <p class="mdh-kicker">Newsletter</p>
+    <h2 class="mdh-h2">Discover More of Morocco.</h2>
+    <p>New coloring books, Moroccan culture and Darija words, straight to your inbox. No spam.</p>
+    {%- form 'customer', id: 'mdh-newsletter', class: 'mdh-form' -%}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      {%- if form.posted_successfully? -%}<p class="mdh-ok">Shukran! You're subscribed.</p>{%- else -%}
+      <label for="mdh-email" class="mdh-sr">Email</label>
+      <input id="mdh-email" type="email" name="contact[email]" placeholder="Your email address" required autocomplete="email">
+      <button type="submit" class="mdh-btn mdh-btn--primary">Subscribe</button>
+      {%- endif -%}
+    {%- endform -%}
+  </section>
+</div>
+
+<style>
+.mdh{--b:#1e3a8a;--g:#e0a526;--t:#b9472a;--c:#fbf6ee;--s:#efe3cf;--n:#13213f;--gr:#2a7d5f;color:var(--n);font-family:Lora,Georgia,serif}
+.mdh *{box-sizing:border-box}
+.mdh img{max-width:100%;height:auto;display:block}
+.mdh-kicker{font:600 .78rem/1 Poppins,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--t);margin:0 0 .8rem}
+.mdh-kicker--gold{color:var(--g)}
+.mdh-h1,.mdh-h2{font-family:Marcellus,Georgia,serif;font-weight:400;line-height:1.08;margin:0 0 1rem;color:inherit}
+.mdh-h1{font-size:clamp(2.2rem,4.4vw,4rem)}
+.mdh-h2{font-size:clamp(1.8rem,3.4vw,2.8rem)}
+.mdh-lead{font-size:clamp(1.05rem,1.4vw,1.25rem);line-height:1.6;max-width:34rem;margin:0 0 1.6rem}
+.mdh-btns{display:flex;flex-wrap:wrap;gap:.8rem}
+.mdh-btn{display:inline-block;padding:.95rem 1.6rem;border-radius:999px;font:600 .82rem/1 Poppins,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:2px solid transparent;transition:transform .15s;cursor:pointer}
+.mdh-btn:hover{transform:translateY(-2px)}
+.mdh-btn--primary{background:var(--b);color:var(--c)}
+.mdh-btn--ghost{border-color:var(--b);color:var(--b)}
+.mdh-btn--gold{background:var(--g);color:var(--n)}
+.mdh-ticks{list-style:none;padding:0;margin:1.4rem 0 0;display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font:500 .85rem Poppins,system-ui,sans-serif}
+.mdh-ticks li:before{content:"\2726  ";color:var(--g)}
+.mdh-ticks--light{color:var(--c);margin-bottom:1.6rem}
+.mdh-hero{position:relative;background:var(--c);overflow:hidden}
+.mdh-hero__img{position:absolute;top:0;right:0;width:56%;height:100%;object-fit:cover;object-position:78% center}
+.mdh-hero:after{content:"";position:absolute;top:0;bottom:0;left:44%;width:10%;background:linear-gradient(90deg,var(--c),rgba(251,246,238,0));pointer-events:none}
+.mdh-hero__inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:clamp(3rem,7vw,6rem) 1.25rem;min-height:clamp(480px,42vw,640px);display:flex;flex-direction:column;justify-content:center}
+.mdh-hero__inner>*{max-width:min(520px,42vw)}
+@media (max-width:749px){.mdh-hero{display:flex;flex-direction:column}.mdh-hero picture{order:2}.mdh-hero__img{position:relative;width:100%;height:auto;aspect-ratio:1/1;object-position:center 85%}.mdh-hero:after{display:none}.mdh-hero__inner{order:1;min-height:0;padding:2rem 1rem 1rem}.mdh-hero__inner>*{max-width:100%}}
+.mdh-sec{padding:clamp(3rem,6vw,5.5rem) 1.25rem;max-width:1200px;margin:0 auto}
+.mdh-sec--sand{max-width:none;background:var(--s)}
+.mdh-sec--sand>*{max-width:1200px;margin-left:auto;margin-right:auto}
+.mdh-head{text-align:center;margin-bottom:2.4rem}
+.mdh-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.mdh-grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+@media (max-width:989px){.mdh-grid3{grid-template-columns:1fr}.mdh-grid4{grid-template-columns:repeat(2,1fr)}}
+.mdh-card{display:block;background:#fff;border-radius:18px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 10px 30px rgba(19,33,63,.08);border:1px solid #eadfcb}
+.mdh-card img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.mdh-card__body{padding:1.3rem 1.4rem 1.6rem}
+.mdh-card h3,.mdh-prod h3,.mdh-why h3{font-family:Marcellus,Georgia,serif;font-weight:400;font-size:1.35rem;margin:0 0 .4rem}
+.mdh-card p{margin:0 0 .8rem;line-height:1.5}
+.mdh-card span{font:600 .8rem Poppins,system-ui,sans-serif;color:var(--b);letter-spacing:.05em}
+.mdh-prod{text-decoration:none;color:inherit}
+.mdh-prod img{border-radius:14px;aspect-ratio:1/1;object-fit:cover;width:100%;margin-bottom:.8rem}
+.mdh-prod h3{font-size:1.05rem;line-height:1.35}
+.mdh-price{font:600 .95rem Poppins,system-ui,sans-serif;color:var(--t);margin:0}
+.mdh-price s{color:#8a8a8a;font-weight:400;margin-right:.3rem}
+.mdh-center{text-align:center;margin-top:2.2rem}
+.mdh-why{display:grid;grid-template-columns:repeat(5,1fr);gap:1.6rem;text-align:center}
+@media (max-width:989px){.mdh-why{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.mdh-why{grid-template-columns:1fr}}
+.mdh-why svg{width:46px;height:46px;margin:0 auto .8rem}
+.mdh-why p{margin:0;line-height:1.5;font-size:.95rem}
+.mdh-darija{background:var(--b);color:var(--c);display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.mdh-darija__img img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.mdh-darija__txt{padding:clamp(2.5rem,6vw,5rem) clamp(1.25rem,5vw,4.5rem)}
+.mdh-darija__txt p{line-height:1.6;max-width:30rem}
+.mdh-ar{font:400 1.6rem Amiri,serif;color:var(--g);margin:.2rem 0 1rem}
+@media (max-width:749px){.mdh-darija{grid-template-columns:1fr}}
+.mdh-news{text-align:center;max-width:720px}
+.mdh-form{display:flex;gap:.6rem;max-width:520px;margin:1.6rem auto 0;flex-wrap:wrap}
+.mdh-form input[type=email]{flex:1 1 240px;padding:.95rem 1.2rem;border:1.5px solid #d8c9ad;border-radius:999px;font:1rem Lora,serif;background:#fff;color:var(--n)}
+.mdh-ok{font-weight:600;color:var(--gr)}
+.mdh-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+
+{% schema %}
+{
+  "name": "MDH homepage",
+  "settings": [
+    { "type": "text", "id": "hero_heading", "label": "Hero heading", "default": "Discover Morocco, One Color at a Time." },
+    { "type": "textarea", "id": "hero_sub", "label": "Hero subheading", "default": "Explore the beauty, history, and culture of Morocco through creative coloring books designed for curious minds of all ages." },
+    { "type": "text", "id": "featured_collection", "label": "Featured collection handle", "default": "featured" }
+  ],
+  "presets": [{ "name": "MDH homepage" }]
+}
+{% endschema %}
