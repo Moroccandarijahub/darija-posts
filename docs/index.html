@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Aimad Kensous - Moroccan Darija teacher, content creator, AI designer and video editor.">
+<meta property="og:title" content="Aimad Kensous Portfolio"><meta property="og:image" content="img/portrait.jpg">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head><body>
+<title>Aimad Kensous Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Manrope:wght@400;500;700;800&display=swap">
+<style>
+/* Layout: single column story — hero, the brand case study, then work grids by craft, then experience and contact */
+:root{
+  --bg:#0e1834; --bg2:#14224a; --card:#182a58; --fg:#f4ecdc; --muted:#b9b3c9; --line:#2a3d73;
+  --gold:#e6a93a; --gold-ink:#14213d; --clay:#d0694f;
+  --display:"Fraunces",Georgia,serif; --body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
+  --bg:#f6f1e6; --bg2:#ece4d3; --card:#ffffff; --fg:#14213d; --muted:#5a5670; --line:#ddd2bc; --gold:#b97d12; --gold-ink:#fff; --clay:#b8462b; color-scheme:light}}
+:root[data-theme="light"]{--bg:#f6f1e6; --bg2:#ece4d3; --card:#ffffff; --fg:#14213d; --muted:#5a5670; --line:#ddd2bc; --gold:#b97d12; --gold-ink:#fff; --clay:#b8462b; color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.6;margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 56px}
+.wrap{max-width:1120px;margin:0 auto}
+a{color:var(--gold)}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;text-wrap:balance}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+section{padding-block:64px 8px}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:28px;max-width:720px}
+.sec-head h2{font-size:clamp(30px,5vw,46px)}
+.sec-head p{color:var(--muted);margin:0}
+
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+nav .in{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px max(16px,env(safe-area-inset-left,0px))}
+nav b{font-family:var(--display);font-size:20px}
+nav .links{display:flex;gap:18px;font-weight:700;font-size:14px;overflow-x:auto}
+nav .links a{color:var(--fg);text-decoration:none;opacity:.8;white-space:nowrap}
+nav .links a:hover,nav .links a:focus-visible{opacity:1;color:var(--gold)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.9fr);gap:40px;align-items:center;padding-block:56px 24px}
+.hero h1{font-size:clamp(44px,8vw,86px);font-weight:800}
+.hero h1 em{color:var(--gold);font-style:italic;font-weight:600}
+.hero .role{font-size:clamp(18px,2.4vw,22px);margin:18px 0 0;max-width:34ch}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{border:1px solid var(--line);background:var(--bg2);border-radius:40px;padding:6px 14px;font-size:13px;font-weight:700}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;border-radius:40px;padding:13px 22px;font-size:15px}
+.btn.p{background:var(--gold);color:var(--gold-ink)}
+.btn.s{border:1.5px solid var(--line);color:var(--fg)}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.portrait{position:relative;aspect-ratio:3/4;max-width:420px;width:100%;justify-self:center}
+.portrait .arch{position:absolute;inset:6% 4% 0;border-radius:999px 999px 18px 18px;background:radial-gradient(circle at 50% 35%,#2f55c4,#1e3b8b 60%,#12245a);border:6px solid var(--gold)}
+.portrait .arch::after{content:"";position:absolute;inset:0;border-radius:inherit;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%233352a6' stroke-width='1.6'%3E%3Crect x='30' y='30' width='36' height='36'/%3E%3Crect x='30' y='30' width='36' height='36' transform='rotate(45 48 48)'/%3E%3Ccircle cx='48' cy='48' r='9'/%3E%3C/g%3E%3C/svg%3E");background-size:80px}
+.portrait img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:92%;max-width:100%;z-index:1;filter:drop-shadow(0 18px 30px rgba(0,0,0,.4))}
+.portrait .sig{position:absolute;z-index:2;left:-6px;bottom:22px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 14px;font-size:13px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.portrait .sig span{display:block;color:var(--muted);font-weight:500}
+
+/* case study */
+.case{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;background:var(--bg2);border:1px solid var(--line);border-radius:28px;padding:28px}
+.case h3{font-size:30px}
+.case ul{margin:14px 0 0;padding-left:18px;color:var(--fg)}
+.case li{margin-bottom:8px}
+.case li b{color:var(--gold)}
+.mosaic{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.mosaic img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;display:block}
+.mosaic .wide{grid-column:span 3;aspect-ratio:900/413}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+
+/* video */
+.vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}
+.vid{min-width:0}
+.vid video{width:100%;max-width:100%;aspect-ratio:9/16;border-radius:18px;background:#000;display:block;border:1px solid var(--line)}
+.vid h3{font-size:19px;margin-top:12px}
+.vid p{margin:6px 0 0;color:var(--muted);font-size:14px}
+.vid .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.vid .tags span{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);border-radius:20px;padding:3px 9px}
+
+/* galleries */
+.strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
+.strip img{flex:none;width:min(70%,300px);aspect-ratio:4/5;object-fit:cover;border-radius:14px;scroll-snap-align:start;border:1px solid var(--line)}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.grid4 figure{margin:0;min-width:0}
+.grid4 img{width:100%;border-radius:14px;display:block;border:1px solid var(--line)}
+.grid4 figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.sub{font-family:var(--display);font-size:22px;margin:30px 0 14px}
+
+/* experience */
+.xp{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px}
+.tl{border-left:2px solid var(--line);padding-left:22px;display:flex;flex-direction:column;gap:24px}
+.tl div{position:relative}
+.tl div::before{content:"";position:absolute;left:-30px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--gold)}
+.tl small{font-weight:800;color:var(--gold);letter-spacing:.06em;font-variant-numeric:tabular-nums}
+.tl h3{font-family:var(--body);font-size:18px;font-weight:800;margin:2px 0}
+.tl p{margin:0;color:var(--muted);font-size:15px}
+.box{background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:22px}
+.box h3{font-family:var(--body);font-size:15px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.lang{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:15px}
+.lang b{font-weight:800}
+.stack{display:flex;flex-direction:column;gap:16px}
+
+/* contact */
+.contact{text-align:center;background:linear-gradient(160deg,#1e3b8b,#12245a);color:#f4ecdc;border-radius:30px;padding:48px 22px;border:2px solid var(--gold)}
+.contact h2{font-size:clamp(32px,5vw,52px)}
+.contact p{max-width:52ch;margin:14px auto 0;color:#d8d3e6}
+.contact .cta{justify-content:center}
+.contact .btn.s{color:#f4ecdc;border-color:rgba(244,236,220,.4)}
+.contact .num{margin-top:18px;font-weight:800;font-size:18px;user-select:all}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:28px}
+
+
+.lead2{color:var(--muted);margin:-6px 0 14px;max-width:70ch}
+.reelgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.reelgrid video{width:100%;max-width:100%;aspect-ratio:9/16;border-radius:12px;background:#000;display:block;border:1px solid var(--line)}
+.covgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+.covgrid img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;display:block;border:1px solid var(--line)}
+.strip.pins img{aspect-ratio:2/3;width:min(45%,200px)}
+.proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.proj div{background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:20px}
+.proj b{display:block;font-family:var(--display);font-size:20px;margin-bottom:6px}
+.proj p{margin:0;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:22px}
+.stats div{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:16px}
+.stats b{display:block;font-family:var(--display);font-size:34px;color:var(--gold);font-variant-numeric:tabular-nums}
+.stats span{font-size:13px;color:var(--muted)}
+@media (max-width:900px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){.hero,.case,.xp{grid-template-columns:minmax(0,1fr)}.portrait{max-width:320px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<nav><div class="in"><b>Aimad Kensous</b><div class="links"><a href="#brand">Brand</a><a href="#video">Video</a><a href="#design">Design</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></div></nav>
+
+<div class="wrap">
+<header class="hero">
+  <div>
+    <div class="eyebrow">Portfolio · Fès, Morocco</div>
+    <h1>Aimad <em>Kensous</em></h1>
+    <p class="role">Content creator, video editor and designer who works with AI. I build brands, edit Reels and run social media from idea to post.</p>
+    <div class="meta"><span class="chip">🎬 Video editing</span><span class="chip">📱 Social media</span><span class="chip">🎨 Design with AI</span><span class="chip">🇲🇦 Darija &amp; English teaching</span></div>
+    <div class="cta"><a class="btn p" href="#video">See my work ↓</a><a class="btn s" href="#contact">Contact me</a></div>
+  </div>
+  <div class="portrait"><div class="arch"></div><img src="img/me-cutout.png" alt="Aimad Kensous"><div class="sig">Aimad Kensous<span>Native Darija · English C1</span></div></div>
+</header>
+
+<section id="brand">
+  <div class="sec-head"><div class="eyebrow">Case study</div><h2>Moroccan Darija Hub</h2><p>A language-learning brand I started and run on my own, teaching real Moroccan Darija to foreigners.</p>
+  <div class="stats"><div><b>28</b><span>carousel posts designed</span></div><div><b>31</b><span>Reels &amp; videos made</span></div><div><b>400+</b><span>phrases in the ebook</span></div><div><b>4</b><span>platforms: IG, FB, TikTok, Pinterest</span></div></div></div>
+  <div class="case">
+    <div>
+      <h3>From zero to a full brand</h3>
+      <ul>
+        <li><b>Ebook:</b> wrote and designed <i>Speak Moroccan Darija</i>: 10 units, 400+ words and phrases, real dialogues. Sold on Gumroad, Payhip and Amazon KDP.</li>
+        <li><b>Social media:</b> run @moroccandarijahub on Instagram, Facebook and TikTok, with a carousel and a Reel planned for every day of the week.</li>
+        <li><b>Visual identity:</b> navy, gold and zellige pattern, used across every post, cover, ad and poster.</li>
+        <li><b>Online store:</b> a Shopify store with Moroccan coloring books (landmarks, zellige) and digital bundles.</li>
+        <li><b>Teaching:</b> private 1-on-1 online Darija lessons.</li>
+      </ul>
+      <div class="cta"><a class="btn s" href="https://www.instagram.com/moroccandarijahub/" target="_blank" rel="noopener">Instagram ↗</a><a class="btn s" href="https://moroccandarijahub.gumroad.com/l/jgyzyb" target="_blank" rel="noopener">The ebook ↗</a><a class="btn s" href="https://moroccandarijahub.netlify.app" target="_blank" rel="noopener">Free quiz ↗</a></div>
+    </div>
+    <div>
+      <div class="mosaic">
+        <img class="wide" src="img/store-hero.jpg" alt="Moroccan Darija Hub store banner">
+        <img src="img/ebook-cover.jpg" alt="Speak Moroccan Darija ebook cover">
+        <img src="img/ebook-inside.jpg" alt="Inside pages of the ebook">
+        <img src="img/logo.jpg" alt="Moroccan Darija Hub logo">
+        <img src="img/color-landmarks.jpg" alt="Discover Morocco coloring book">
+        <img src="img/color-zellige.jpg" alt="Zellige patterns coloring book">
+        <img src="img/color-before-after.jpg" alt="Coloring book before and after">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="video">
+  <div class="sec-head"><div class="eyebrow">Video editing</div><h2>Reels &amp; motion</h2><p>Talking-head edits with silence cuts, bilingual subtitles, motion graphics, color correction and cleaned-up audio. Tap to play.</p></div>
+  <div class="vids">
+    <div class="vid"><video controls playsinline preload="none" poster="img/poster-laundry.jpg" src="vid/laundry.mp4"></video><h3>At the laundry in Darija</h3><p>A real conversation filmed in a laundry shop, made into a lesson with word pop-ups and a vocabulary section.</p><div class="tags"><span>Subtitles</span><span>Education</span><span>Audio clean-up</span></div></div>
+    <div class="vid"><video controls playsinline preload="none" poster="img/poster-partner.jpg" src="vid/partner.mp4"></video><h3>Moroccan partner?</h3><p>A promo Reel edited from 8 raw clips: jump cuts, punch-in zooms, animated captions and brand cards.</p><div class="tags"><span>Promo</span><span>Captions</span><span>Motion graphics</span></div></div>
+    <div class="vid"><video controls playsinline preload="none" poster="img/poster-shukran.jpg" src="vid/shukran.mp4"></video><h3>Stop saying only “Shukran”</h3><p>Talking-head lesson with phrase cards, Arabic script, pronunciation pills and a music bed.</p><div class="tags"><span>Lesson</span><span>Phrase cards</span></div></div>
+    <div class="vid"><video controls playsinline preload="none" poster="img/poster-outro.jpg" src="vid/outro.mp4"></video><h3>“Bslama” outro</h3><p>An animated end card with two characters and a Follow button tap, reused at the end of Reels.</p><div class="tags"><span>Animation</span></div></div>
+    <div class="vid"><video controls playsinline preload="none" poster="img/poster-fbad.jpg" src="vid/fbad.mp4"></video><h3>Facebook group ad</h3><p>A 16-second animated ad for lessons, the ebook and the Instagram page.</p><div class="tags"><span>Ads</span><span>Animation</span></div></div>
+  </div>
+  <h3 class="sub">26 daily Reels · a month of Darija lessons</h3>
+  <p class="lead2">Animated lesson Reels in the brand style, one per day, posted to Instagram, Facebook and TikTok. Tap any one to play.</p>
+  <div class="reelgrid"><video controls playsinline preload="none" poster="img/rp/day3.jpg" src="vid/r/day3.mp4" aria-label="Daily Reel, day 3"></video><video controls playsinline preload="none" poster="img/rp/day4.jpg" src="vid/r/day4.mp4" aria-label="Daily Reel, day 4"></video><video controls playsinline preload="none" poster="img/rp/day5.jpg" src="vid/r/day5.mp4" aria-label="Daily Reel, day 5"></video><video controls playsinline preload="none" poster="img/rp/day6.jpg" src="vid/r/day6.mp4" aria-label="Daily Reel, day 6"></video><video controls playsinline preload="none" poster="img/rp/day7.jpg" src="vid/r/day7.mp4" aria-label="Daily Reel, day 7"></video><video controls playsinline preload="none" poster="img/rp/day8.jpg" src="vid/r/day8.mp4" aria-label="Daily Reel, day 8"></video><video controls playsinline preload="none" poster="img/rp/day9.jpg" src="vid/r/day9.mp4" aria-label="Daily Reel, day 9"></video><video controls playsinline preload="none" poster="img/rp/day10.jpg" src="vid/r/day10.mp4" aria-label="Daily Reel, day 10"></video><video controls playsinline preload="none" poster="img/rp/day11.jpg" src="vid/r/day11.mp4" aria-label="Daily Reel, day 11"></video><video controls playsinline preload="none" poster="img/rp/day12.jpg" src="vid/r/day12.mp4" aria-label="Daily Reel, day 12"></video><video controls playsinline preload="none" poster="img/rp/day13.jpg" src="vid/r/day13.mp4" aria-label="Daily Reel, day 13"></video><video controls playsinline preload="none" poster="img/rp/day14.jpg" src="vid/r/day14.mp4" aria-label="Daily Reel, day 14"></video><video controls playsinline preload="none" poster="img/rp/day15.jpg" src="vid/r/day15.mp4" aria-label="Daily Reel, day 15"></video><video controls playsinline preload="none" poster="img/rp/day16.jpg" src="vid/r/day16.mp4" aria-label="Daily Reel, day 16"></video><video controls playsinline preload="none" poster="img/rp/day17.jpg" src="vid/r/day17.mp4" aria-label="Daily Reel, day 17"></video><video controls playsinline preload="none" poster="img/rp/day18.jpg" src="vid/r/day18.mp4" aria-label="Daily Reel, day 18"></video><video controls playsinline preload="none" poster="img/rp/day19.jpg" src="vid/r/day19.mp4" aria-label="Daily Reel, day 19"></video><video controls playsinline preload="none" poster="img/rp/day20.jpg" src="vid/r/day20.mp4" aria-label="Daily Reel, day 20"></video><video controls playsinline preload="none" poster="img/rp/day21.jpg" src="vid/r/day21.mp4" aria-label="Daily Reel, day 21"></video><video controls playsinline preload="none" poster="img/rp/day22.jpg" src="vid/r/day22.mp4" aria-label="Daily Reel, day 22"></video><video controls playsinline preload="none" poster="img/rp/day23.jpg" src="vid/r/day23.mp4" aria-label="Daily Reel, day 23"></video><video controls playsinline preload="none" poster="img/rp/day24.jpg" src="vid/r/day24.mp4" aria-label="Daily Reel, day 24"></video><video controls playsinline preload="none" poster="img/rp/day25.jpg" src="vid/r/day25.mp4" aria-label="Daily Reel, day 25"></video><video controls playsinline preload="none" poster="img/rp/day26.jpg" src="vid/r/day26.mp4" aria-label="Daily Reel, day 26"></video><video controls playsinline preload="none" poster="img/rp/day27.jpg" src="vid/r/day27.mp4" aria-label="Daily Reel, day 27"></video><video controls playsinline preload="none" poster="img/rp/day28.jpg" src="vid/r/day28.mp4" aria-label="Daily Reel, day 28"></video></div>
+</section>
+
+
+<section id="design">
+  <div class="sec-head"><div class="eyebrow">Design</div><h2>Posts, covers, ads &amp; print</h2><p>Designed and produced with AI tools under my direction, in one consistent brand style.</p></div>
+  <h3 class="sub">Instagram carousel · 5 slides</h3>
+  <div class="strip">
+    <img src="img/car-hammam.jpg" alt="Carousel slide 1: Going to a hammam?"><img src="img/car-hammam-2.jpg" alt="Carousel slide 2"><img src="img/car-hammam-3.jpg" alt="Carousel slide 3"><img src="img/car-hammam-4.jpg" alt="Carousel slide 4"><img src="img/car-hammam-5.jpg" alt="Carousel slide 5">
+  </div>
+  <h3 class="sub">28 carousel posts · one for every day</h3>
+  <div class="covgrid"><img loading="lazy" src="img/c/d1.jpg" alt="Carousel cover, day 1"><img loading="lazy" src="img/c/d2.jpg" alt="Carousel cover, day 2"><img loading="lazy" src="img/c/d3.jpg" alt="Carousel cover, day 3"><img loading="lazy" src="img/c/d4.jpg" alt="Carousel cover, day 4"><img loading="lazy" src="img/c/d5.jpg" alt="Carousel cover, day 5"><img loading="lazy" src="img/c/d6.jpg" alt="Carousel cover, day 6"><img loading="lazy" src="img/c/d7.jpg" alt="Carousel cover, day 7"><img loading="lazy" src="img/c/d8.jpg" alt="Carousel cover, day 8"><img loading="lazy" src="img/c/d9.jpg" alt="Carousel cover, day 9"><img loading="lazy" src="img/c/d10.jpg" alt="Carousel cover, day 10"><img loading="lazy" src="img/c/d11.jpg" alt="Carousel cover, day 11"><img loading="lazy" src="img/c/d12.jpg" alt="Carousel cover, day 12"><img loading="lazy" src="img/c/d13.jpg" alt="Carousel cover, day 13"><img loading="lazy" src="img/c/d14.jpg" alt="Carousel cover, day 14"><img loading="lazy" src="img/c/d15.jpg" alt="Carousel cover, day 15"><img loading="lazy" src="img/c/d16.jpg" alt="Carousel cover, day 16"><img loading="lazy" src="img/c/d17.jpg" alt="Carousel cover, day 17"><img loading="lazy" src="img/c/d18.jpg" alt="Carousel cover, day 18"><img loading="lazy" src="img/c/d19.jpg" alt="Carousel cover, day 19"><img loading="lazy" src="img/c/d20.jpg" alt="Carousel cover, day 20"><img loading="lazy" src="img/c/d21.jpg" alt="Carousel cover, day 21"><img loading="lazy" src="img/c/d22.jpg" alt="Carousel cover, day 22"><img loading="lazy" src="img/c/d23.jpg" alt="Carousel cover, day 23"><img loading="lazy" src="img/c/d24.jpg" alt="Carousel cover, day 24"><img loading="lazy" src="img/c/d25.jpg" alt="Carousel cover, day 25"><img loading="lazy" src="img/c/d26.jpg" alt="Carousel cover, day 26"><img loading="lazy" src="img/c/d27.jpg" alt="Carousel cover, day 27"><img loading="lazy" src="img/c/d28.jpg" alt="Carousel cover, day 28"></div>
+  <h3 class="sub">Pinterest pins</h3>
+  <div class="strip pins"><img loading="lazy" src="img/pin/p1.jpg" alt="Pinterest pin 1"><img loading="lazy" src="img/pin/p2.jpg" alt="Pinterest pin 2"><img loading="lazy" src="img/pin/p3.jpg" alt="Pinterest pin 3"><img loading="lazy" src="img/pin/p4.jpg" alt="Pinterest pin 4"><img loading="lazy" src="img/pin/p5.jpg" alt="Pinterest pin 5"><img loading="lazy" src="img/pin/p6.jpg" alt="Pinterest pin 6"><img loading="lazy" src="img/pin/p7.jpg" alt="Pinterest pin 7"><img loading="lazy" src="img/pin/p8.jpg" alt="Pinterest pin 8"></div>
+  <h3 class="sub">Reel covers</h3>
+  <div class="grid4">
+    <figure><img src="img/reel-cover-laundry.jpg" alt=""><figcaption>Laundry Reel: background removed, new scene</figcaption></figure>
+    <figure><img src="img/reel-cover-partner.jpg" alt=""><figcaption>Moroccan partner Reel</figcaption></figure>
+  </div>
+  <h3 class="sub">Ads</h3>
+  <div class="grid4">
+    <figure><img src="img/ad-main.jpg" alt=""><figcaption>Main offer</figcaption></figure>
+    <figure><img src="img/ad-lessons.jpg" alt=""><figcaption>Private lessons</figcaption></figure>
+    <figure><img src="img/ad-ebook.jpg" alt=""><figcaption>Ebook</figcaption></figure>
+    <figure><img src="img/ad-free.jpg" alt=""><figcaption>Free mini lesson</figcaption></figure>
+  </div>
+  <h3 class="sub">Print posters · A3</h3>
+  <div class="grid4">
+    <figure><img src="img/poster-salam.jpg" alt=""><figcaption>Salam</figcaption></figure>
+    <figure><img src="img/poster-brand.jpg" alt=""><figcaption>Brand poster</figcaption></figure>
+    <figure><img src="img/poster-numbers.jpg" alt=""><figcaption>Why 3 · 7 · 9?</figcaption></figure>
+    <figure><img src="img/poster-phrases.jpg" alt=""><figcaption>Everyday words</figcaption></figure>
+  </div>
+</section>
+
+
+<section id="projects">
+  <div class="sec-head"><div class="eyebrow">More projects</div><h2>Products, plans &amp; teaching</h2></div>
+  <div class="proj">
+    <div><b>Darija Practice Room</b><p>A free online quiz with native audio to practise Darija. <a href="https://moroccandarijahub.netlify.app" target="_blank" rel="noopener">Open it ↗</a></p></div>
+    <div><b>Moroccan hotel coloring books</b><p>A collection idea pitched to hotels: coloring books about famous Moroccan hotels, starting with Palais Jamaï in Fès, in English and French.</p></div>
+    <div><b>Taste of Morocco</b><p>Blueprint for a beginner-friendly Moroccan cooking ebook for home cooks abroad.</p></div>
+    <div><b>Launch marketing kits</b><p>Launch plans, captions and promo material for the ebook on Payhip and the Shopify store.</p></div>
+    <div><b>Content calendars</b><p>Weekly content plans with topics, hooks, captions and hashtags for every day.</p></div>
+    <div><b>Private Darija lessons</b><p>Custom 1-hour lesson materials for online students, from beginner to advanced grammar and expressions.</p></div>
+  </div>
+</section>
+<section id="experience">
+  <div class="sec-head"><div class="eyebrow">Experience</div><h2>Where I've worked</h2></div>
+  <div class="xp">
+    <div class="tl">
+      <div><small>2026 – NOW</small><h3>Founder · Moroccan Darija Hub</h3><p>Ebook author, content creator, social media manager and online Darija teacher.</p></div>
+      <div><small>2022 – NOW</small><h3>Freelance video editor</h3><p>Reels and short videos: cutting, subtitles, motion graphics, color and sound.</p></div>
+      <div><small>2023 – 2024</small><h3>Translator &amp; Community Assistant · U.S. Peace Corps Morocco</h3><p>Translated between Arabic, Darija and English and supported community programs. Received a certificate of appreciation (Feb 2024).</p></div>
+      <div><small>2018 – NOW</small><h3>Karate contact &amp; fitness coach · Atlas Tigers Sports Academy</h3><p>Coach and 1st Dan black belt in Karate Contact (FRMK, 2020).</p></div>
+    </div>
+    <div class="stack">
+      <div class="box"><h3>Skills</h3><div class="skills"><span class="chip">Video editing</span><span class="chip">Subtitles &amp; captions</span><span class="chip">Motion graphics</span><span class="chip">Social media management</span><span class="chip">Content planning</span><span class="chip">Copywriting</span><span class="chip">Graphic design</span><span class="chip">AI tools (Claude, Higgsfield)</span><span class="chip">Shopify</span><span class="chip">Amazon KDP</span><span class="chip">Teaching</span></div></div>
+      <div class="box"><h3>Languages</h3><div class="lang"><b>Arabic &amp; Darija</b><span>Native</span><b>English</b><span>C1</span><b>French</b><span>Basic</span></div></div>
+      <div class="box"><h3>Education</h3><p style="margin:0">BA English Studies<br><span style="color:var(--muted)">Sidi Mohamed Ben Abdallah University, Fès · 2022 – in progress</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <div class="eyebrow">Let's work together</div>
+    <h2>Need Reels, content or a brand?</h2>
+    <p>I'm open to jobs and freelance projects in content creation, video editing and social media, in Morocco or abroad.</p>
+    <div class="cta"><a class="btn p" href="https://www.instagram.com/aimad_kensous/" target="_blank" rel="noopener">@aimad_kensous ↗</a><a class="btn s" href="https://www.instagram.com/moroccandarijahub/" target="_blank" rel="noopener">@moroccandarijahub ↗</a></div>
+    <div class="num">📞 +212 6 28 10 18 12</div>
+  </div>
+  <footer>© 2026 Aimad Kensous · Fès, Morocco</footer>
+</section>
+</div>
+
+</body></html>
